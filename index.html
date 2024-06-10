@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Your existing HTML content here -->
+
+  <div class="container">
+    <div class="card">
+      <div class="left-items">
+        <!-- Sign-up form content here -->
+        <h2>Stay updated!</h2>
+        <p class="first">Join 60,000+ product managers recieving monthly <br>updates on:</p>
+        <div class="info-contact">
+          <img src="assets/images/icon-list.svg" alt="" class="firstimg">
+          <p class="sec">Product discovery and building what matters</p>
+          <img src="assets/images/icon-list.svg" class="secondimg" alt="">
+          <p class="third">Measuring to ensure updates are a success</p>
+          <img src="assets/images/icon-list.svg" class="thirdimg" alt="">
+          <p class="fourth"> And much more!</p>
+        </div>
+      </div>
+      <div class="right-card">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+      </div>
+      <div class="contact-form">
+        <p>Email address</p>
+        <form>
+          <input type="email" name="" id="" placeholder="email@company.com">
+          <button id="subscribe-button">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript code for redirecting to another page -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the button element
+      var button = document.getElementById("subscribe-button");
+
+      // Add click event listener to the button
+      button.addEventListener("click", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Redirect to another page when the button is clicked
+        window.location.href = "Success.html";
+      });
+    });
+  </script>
+</body>
+
+</html>
