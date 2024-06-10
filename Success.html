@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Success Message</title>
     <link rel="stylesheet" href="Success.css">
 </head>
 <body>
@@ -15,11 +15,29 @@
             <h1>
                 Thanks for <br> subscribing!
             </h1>
-            <p>A confirmation email has been sent to <br> <span style="font-weight: bold;">ash@loremcompany.com.</span> Please open it and click <br> the button inside to confirm your subscription.</p>
+            <p>A confirmation email has been sent to <br> <span id="email-address" style="font-weight: bold;"></span>. Please open it and click <br> the button inside to confirm your subscription.</p>
         </div>
         <div class="btn">
-            <button>Dismiss message</button>
+            <button id="dismiss-button">Dismiss message</button>
         </div>
     </div>
+
+    <!-- JavaScript code for retrieving email parameter from URL -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the email parameter from URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var email = urlParams.get('email');
+
+        // Display the email in the success message
+        document.getElementById("email-address").innerText = email;
+
+        // Add click event listener to the dismiss button
+        document.getElementById("dismiss-button").addEventListener("click", function() {
+          // Redirect back to the main page
+          window.location.href = "index.html";
+        });
+      });
+    </script>
 </body>
 </html>
